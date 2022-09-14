@@ -1,0 +1,12 @@
+name: Development to QA branch merge the yml file.
+on:
+  push:
+    branches: [ development,QA ]
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: script file
+       run: sh ./sh/ci.yml
+       shell: pwsh
